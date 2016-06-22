@@ -1,5 +1,5 @@
 'use strict';
-
+const _ = require('lodash');
 const mongoose = require('mongoose');
 // your common helpers file
 const commonHelper = require('../helpers/common');
@@ -12,6 +12,7 @@ const ObjectId = Schema.ObjectId;
 const Mixed = Schema.Types.Mixed;
 
 const ProductSchema = new Schema({
+  title:        { type: String, required: true },
   sku:          { type: String, required: true },
   category:     { type: String },
   slug:         { type: String },
